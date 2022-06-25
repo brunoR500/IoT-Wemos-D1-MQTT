@@ -4,7 +4,7 @@ A simple system created for remote control of electronic devices in a home,  eit
 
 Communication between the various devices is mainly through the use of the MQTT protocol.
 
-<img src="file:///home/leonis/.var/app/com.github.marktext.marktext/config/marktext/images/2022-06-25-21-16-39-MQTT_schema.png" title="" alt="" data-align="center">
+<img src="./MQTT_schema.png" title="" alt="" data-align="center">
 
 ### Description
 
