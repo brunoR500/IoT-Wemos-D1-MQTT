@@ -1,0 +1,15 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "python.formatting.provider": "none",
+  "sqltools.useNodeRuntime": true,
+  "sqltools.connections": [
+    {
+      "previewLimit": 50,
+      "driver": "SQLite",
+      "database": "${workspaceFolder:IoT-Wemos-D1-MQTT}/python/mqttStore.db",
+      "name": "wetter"
+    }
+  ]
+}
