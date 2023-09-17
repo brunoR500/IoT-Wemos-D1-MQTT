@@ -4,7 +4,7 @@ A basic system that can show and save real-time data such as temperature, humidi
 
 Communication between the various devices is mainly through the use of the MQTT protocol.
 
-<img src=".img/MQTT_schema.png" title="" alt="" data-align="center">
+<img src="img/MQTT_schema.png" title="" alt="" data-align="center">
 
 ## Description
 
@@ -22,8 +22,8 @@ Communication between the various devices is mainly through the use of the MQTT 
   - shows in a diagram all measurements/values from an API
   - remote control of an electronic device (example fan connected to relay in arduino) and give the status of the device
 
-<img src=".img/img_1.png" title="home-react-webapp" alt="home-react-webapp" data-align="center">
-<img src=".img/img_2.png" title="settings-react-webapp" alt="settings-react-webapp" data-align="center">
+<img src="img/img_2.png" title="settings-react-webapp" alt="settings-react-webapp" data-align="center" width="50%">
+<img src="img/img_1.png" title="home-react-webapp" alt="home-react-webapp" data-align="center" width="50%">
 
 ## Used Hardware
 
