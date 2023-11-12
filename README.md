@@ -35,7 +35,7 @@ Communication between the various devices is mainly through the use of the MQTT 
 
 - MobX-State-Tree (State management)
 - React
-- Flask python
+- FastAPI 
 - MQTT
 - SQLite 3
 - Material UI
@@ -50,7 +50,7 @@ cd python
 python3 -m venv my_env
 source my_env/bin/activate
 pip install -r requirements.txt
-python3 flask_API.py
+python3 main_fastAPI.py
 python3 mqtt_sub_save.py
 
 # run the react web app

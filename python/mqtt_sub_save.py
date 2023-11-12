@@ -1,9 +1,9 @@
+import utils.database as database
 import paho.mqtt.subscribe as subscribe
 import time
 import random
 import sqlite3
 import json
-from flask import Flask, jsonify
 
 # MQTT Configuration
 broker = "broker.emqx.io"
@@ -39,7 +39,6 @@ cursor.execute(
 """
 )
 
-
 # MQTT Callback Function
 def on_message_save(client, userdata, message):
     timestamp = int(time.time())
@@ -49,23 +48,11 @@ def on_message_save(client, userdata, message):
         msg = json.loads(message.payload.decode())
 
         if message.topic == "termostat/temphum":
-            cursor.execute(
-                "INSERT INTO temphumidity (device, sensorType, temperature, humidity, timestamp) VALUES (?, ?, ?, ?, ?)",
-                (
-                    msg["device"],
-                    msg["sensorType"],
-                    msg["temperature"],
-                    msg["humidity"],
-                    timestamp,
-                ),
+            database.insert_temphumidity_data(
+                msg["device"], msg["sensorType"], msg["temperature"], msg["humidity"], timestamp
             )
-            connection.commit()
         elif message.topic == "termostat/coolfan":
-            cursor.execute(
-                "INSERT INTO coolfan (state, timestamp) VALUES (?, ?)",
-                (msg, timestamp),
-            )
-            connection.commit()
+            database.insert_coolfan_data(msg, timestamp)
 
 
 # Start MQTT Subscriber
