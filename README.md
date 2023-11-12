@@ -4,7 +4,7 @@ A basic system that can show and save real-time data such as temperature, humidi
 
 Communication between the various devices is mainly through the use of the MQTT protocol.
 
-<img src="img/MQTT_schema.png" title="" alt="" data-align="center">
+<img src="img/MQTT_schema_1.png" title="" alt="" data-align="center">
 
 ## Description
 
